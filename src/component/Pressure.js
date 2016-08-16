@@ -12,8 +12,6 @@ class Pressure extends Component {
   }
     render() {
     const { storeData } = this.context;
-    console.log(this.props);
-    //let temp = this.props.store.getState();
     return (
       <div>
         <lable>Pressure: {this.props.store.pressure}</lable><br/>
