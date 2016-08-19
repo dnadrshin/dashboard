@@ -17,9 +17,7 @@ class Temperature extends Component {
         <lable>Temperature: {this.props.todos.temperature}</lable><br/>
         <input 
           type="range" min="10" max="35" step="1"
-          onChange={(e=>{this.props.onInputChange(e)
-          //store.dispatch({type: 'TEMP_CHANGE', temp: e.target.value});
-          }).bind(this)}/>
+          onChange={(e=>{this.props.onInputChange(e)}).bind(this)}/>
       </div>
     ) 
   }
