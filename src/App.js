@@ -19,6 +19,7 @@ var promise = fetch('http://private-4945e-weather34.apiary-proxy.com/weather34/r
                     let data_bar = data[0].days.map((item)=>{
                       return item.amount;
                     });
+                    console.log(data);
                     store.dispatch({type: 'AJAX_CHANGE', data_arr: data[0].days, data_bar})
                   });
               });

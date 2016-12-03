@@ -2,8 +2,6 @@ import { combineReducers } from 'redux';
 import chanceOfRain from '../calculation';
 import initialStore from './initialStore';
 
-
-
 /**
  * @return {[Array]}
  */
@@ -20,13 +18,11 @@ let onChangeData = function(Days, pressure, temperature){
     return data 
   }
  
-
-
 /**
  * Reducer
- * @param  {[state]}
+ * @param  {[initState]}
  * @param  {[action]}
- * @return {[type]}
+ * @return {[nextState]}
  */
 function counter(state = initialStore, action) {
   let temperature = state.temperature;
@@ -47,6 +43,7 @@ function counter(state = initialStore, action) {
       return {temperature, pressure, data_arr: action.data_arr, data_bar: action.data_bar, data_line}
     }
     default:
+
       return state
   }
 }
