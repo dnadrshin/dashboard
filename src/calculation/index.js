@@ -9,9 +9,4 @@ function chanceOfRain(pressure, temperature, amount) {
     return [lower_bound, mean, upper_bound];
 }
 
-
-
-
-
-
 export default chanceOfRain;

@@ -17,7 +17,7 @@ class Pressure extends Component {
         <lable>Pressure: {this.props.store.pressure}</lable><br/>
         <input 
           type="range" min="970" max="1030" step="1" 
-          onChange={(e=>{this.props.onInputChange(e)}).bind(this)}/>
+          onChange={((e)=>{this.props.onInputChange(e)}).bind(this)}/>
       </div>
     ) 
   }

@@ -33,7 +33,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-const LineChartC= connect(mapStateToProps)(LineChart)
+const LineChartC = connect(mapStateToProps)(LineChart)
 
 
 export default LineChartC;

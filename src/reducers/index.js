@@ -36,16 +36,16 @@ function counter(state = initialStore, action) {
   switch (action.type) {
     case 'TEMP_CHANGE':{
       let data_line = onChangeData(data_arr, pressure, action.temperature);
-      return {temperature: action.temperature, pressure: pressure, data_arr: data_arr, data_bar: data_bar, data_line: data_line}
+      return {temperature: action.temperature, pressure, data_arr, data_bar, data_line}
     }
 
     case 'PRESS_CHANGE':{
       let data_line = onChangeData(data_arr, action.pressure, temperature);
-      return {temperature: temperature, pressure: action.pressure, data_arr: data_arr, data_bar: data_bar, data_line: data_line}
+      return {temperaturee, pressure: action.pressure, data_arr, data_bar, data_line}
     }
     case 'AJAX_CHANGE':{
       let data_line = onChangeData(action.data_arr, pressure, temperature);
-      return {temperature: temperature, pressure: pressure, data_arr: action.data_arr, data_bar: action.data_bar, data_line: data_line}
+      return {temperature, pressure, data_arr: action.data_arr, data_bar: action.data_bar, data_line}
     }
     default:
       return state
