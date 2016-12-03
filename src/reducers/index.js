@@ -24,8 +24,8 @@ let onChangeData = function(Days, pressure, temperature){
 
 /**
  * Reducer
- * @param  {[type]}
- * @param  {[type]}
+ * @param  {[state]}
+ * @param  {[action]}
  * @return {[type]}
  */
 function counter(state = initialStore, action) {
@@ -38,10 +38,9 @@ function counter(state = initialStore, action) {
       let data_line = onChangeData(data_arr, pressure, action.temperature);
       return {temperature: action.temperature, pressure, data_arr, data_bar, data_line}
     }
-
     case 'PRESS_CHANGE':{
       let data_line = onChangeData(data_arr, action.pressure, temperature);
-      return {temperaturee, pressure: action.pressure, data_arr, data_bar, data_line}
+      return {temperature, pressure: action.pressure, data_arr, data_bar, data_line}
     }
     case 'AJAX_CHANGE':{
       let data_line = onChangeData(action.data_arr, pressure, temperature);
