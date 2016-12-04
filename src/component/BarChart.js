@@ -8,7 +8,6 @@ import {Bar} from 'react-chartjs-2';
 
 class LineChart extends Component {
 	render(){
-	console.log(this.props.store.data_bar);	
 	let chartData = {
 		  labels: ['1', '2', '3', '4', '5', '6', '7'],
 		  datasets: [
