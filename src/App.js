@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { NICE, SUPER_NICE } from './colors';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import expect, { createSpy, spyOn, isSpy } from 'expect';
+//import expect, { createSpy, spyOn, isSpy } from 'expect';
 import CountData from './reducers';
 import Temperature from './component/Temperature';
 import Pressure from './component/Pressure';
@@ -14,12 +13,11 @@ import BarChart from './component/BarChart';
  * @param  {Function} data) {                                 let data_bar [array of data]
  * @return {[type]}         [description]
  */
-var promise = fetch('http://private-4945e-weather34.apiary-proxy.com/weather34/rain').then(function (response) {
+fetch('http://private-4945e-weather34.apiary-proxy.com/weather34/rain').then(function (response) {
                   response.json().then(function(data) {  
                     let data_bar = data[0].days.map((item)=>{
                       return item.amount;
                     });
-                    console.log(data);
                     store.dispatch({type: 'AJAX_CHANGE', data_arr: data[0].days, data_bar})
                   });
               });
@@ -28,7 +26,6 @@ var promise = fetch('http://private-4945e-weather34.apiary-proxy.com/weather34/r
 let store = createStore(CountData)
 
 store.subscribe(() =>{
-    console.log(store.getState());
   }
 )
 

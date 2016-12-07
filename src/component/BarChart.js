@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+//import { Provider } from 'react-redux';
 import { connect } from 'react-redux'; 
-import Chart from 'chart.js';
+//import Chart from 'chart.js';
 import {Bar} from 'react-chartjs-2';
 
 
@@ -9,18 +9,18 @@ import {Bar} from 'react-chartjs-2';
 class LineChart extends Component {
 	render(){
 	let chartData = {
-		  labels: ['1', '2', '3', '4', '5', '6', '7'],
-		  datasets: [
-		    {
-		      label: 'Weather Amount',
-		      backgroundColor: 'rgba(255,99,132,0.2)',
-		      borderColor: 'rgba(255,99,132,1)',
-		      borderWidth: 1,
-		      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-		      hoverBorderColor: 'rgba(255,99,132,1)',
-		      data: this.props.store.data_bar
-		    }
-		  ]
+			labels: ['1', '2', '3', '4', '5', '6', '7'],
+			datasets: [
+				{
+					label: 'Weather Amount',
+					backgroundColor: 'rgba(255,99,132,0.2)',
+					borderColor: 'rgba(255,99,132,1)',
+					borderWidth: 1,
+					hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+					hoverBorderColor: 'rgba(255,99,132,1)',
+					data: this.props.store.data_bar
+				}
+			]
 		};	
 		return <Bar data={chartData} />
 	}

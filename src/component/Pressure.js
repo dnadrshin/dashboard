@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+//import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 
 
@@ -11,7 +11,6 @@ class Pressure extends Component {
     }
   }
     render() {
-    const { storeData } = this.context;
     return (
       <div>
         <lable>Pressure: {this.props.store.pressure}</lable><br/>

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
 import { connect } from 'react-redux';
 
 
@@ -11,7 +10,6 @@ class Temperature extends Component {
     }
   }
     render() {
-    const { storeData } = this.context;
     return (
       <div>
         <lable>Temperature: {this.props.todos.temperature}</lable><br/>
