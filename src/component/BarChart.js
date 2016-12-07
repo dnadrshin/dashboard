@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-//import { Provider } from 'react-redux';
-import { connect } from 'react-redux'; 
-//import Chart from 'chart.js';
-import {Bar} from 'react-chartjs-2';
+import { connect } from 'react-redux';
+import { Bar } from 'react-chartjs-2';
 
 
 
 class LineChart extends Component {
-	render(){
-	let chartData = {
+	render() {
+		let chartData = {
 			labels: ['1', '2', '3', '4', '5', '6', '7'],
 			datasets: [
 				{
@@ -21,15 +19,15 @@ class LineChart extends Component {
 					data: this.props.store.data_bar
 				}
 			]
-		};	
+		};
 		return <Bar data={chartData} />
 	}
 }
 
 const mapStateToProps = (state) => {
-  return {
-    store: state
-  }
+	return {
+		store: state
+	}
 }
 
 const LineChartC = connect(mapStateToProps)(LineChart)
