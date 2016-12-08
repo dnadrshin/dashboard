@@ -1,6 +1,6 @@
-// import React from 'react';
-// import TestUtils from 'react-addons-test-utils'
-// //import { mount, shallow } from 'enzyme';
+import React from 'react';
+import TestUtils from 'react-addons-test-utils'
+import { mount, shallow } from 'enzyme';
 // //import {expect} from 'expect';
 // import {App} from '../../src/App.js';
 

@@ -1,29 +1,31 @@
 <!doctype html>
 <html>
-  <head>
-    <title>React Transform Boilerplate</title>
-  </head>
-  <style type="text/css">
-	  .container{
-	  	width: 1200px;
+
+<head>
+	<title>Weather dashboard</title>
+</head>
+<style type="text/css">
+	.container {
+		width: 1200px;
 		margin: auto;
-	  }
-	.small_container{
+	}
+	
+	.small_container {
 		margin-top: 50px;
-		width:600px;
+		width: 600px;
 		float: left;
 	}
+</style>
 
-  </style>
-  <body>
-  	<div class="container">
-  		<div id="root"></div>
-  	</div>
+<body>
+	<div class="container">
+		<div id="root"></div>
+	</div>
 
-    <script src="dist/bundle.js"></script>
-		
-		<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
-		<script>
+	<script src="dist/bundle.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+	<script>
 			// Initialize Firebase
 			var config = {
 				apiKey: "AIzaSyClJdrXTpIFdCxm6dc4v75b7yw4gRTrPiw",
@@ -35,5 +37,6 @@
 		</script>
 
 
-  </body>
+</body>
+
 </html>
