@@ -1,8 +1,6 @@
 import expect from 'expect';
 import * as reducer from '../src/reducers'
 
-console.log(reducer.default);
-
 describe('reducer', () => {
     beforeEach(() => {
 

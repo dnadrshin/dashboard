@@ -1,13 +1,16 @@
-//import { combineReducers } from 'redux';
+// @flow
+
 import chanceOfRain from '../calculation';
 import initialStore from './initialStore';
+
+export default counter;
 
 /**
  * @return {[Array]}
  */
-let onChangeData = function (Days, pressure, temperature) {
+let onChangeData = function (Days: {amount: number}[], pressure: number, temperature: number) {
     let data = [[], [], []];
-    Days.forEach(function (item) {
+    Days.forEach(function (item: {amount: number}) {
         var moreData = [[], [], []];
         moreData = chanceOfRain(pressure, temperature, item.amount);
         /*Add data to arrays to visual by plugin*/
@@ -24,7 +27,8 @@ let onChangeData = function (Days, pressure, temperature) {
  * @param  {[action]}
  * @return {[nextState]}
  */
-function counter(state = initialStore, action) {
+function counter(state: {temperature: number, pressure: number, data_arr: {amount: number}[], data_bar: number[], data_line: number[]} = initialStore, 
+                    action: {temperature: number, pressure: number, data_arr: {amount: number}[], data_bar: number[], data_line: number[], type: string}) {
     let temperature = state.temperature;
     let pressure = state.pressure;
     let data_arr = state.data_arr;
@@ -43,9 +47,6 @@ function counter(state = initialStore, action) {
             return { temperature, pressure, data_arr: action.data_arr, data_bar: action.data_bar, data_line }
         }
         default:
-
             return state
     }
 }
-
-export default counter;

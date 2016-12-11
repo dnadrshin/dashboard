@@ -11,18 +11,21 @@
   "rules": {
     "quotes": [2, "single"],
     "strict": [2, "never"],
-    "babel/generator-star-spacing": 1,
+    "generator-star-spacing": 1,
     "babel/new-cap": 1,
-    "babel/object-shorthand": 1,
-    "babel/arrow-parens": 1,
+    "object-shorthand": 1,
+    "arrow-parens": 1,
     "babel/no-await-in-loop": 1,
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
-    "react/react-in-jsx-scope": 2
+    "react/react-in-jsx-scope": 2, 
+    "flowtype-errors/show-errors": 1,
+    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"]
   },
   "plugins": [
     "babel",
-    "react"
+    "react",
+    "flowtype-errors"
   ],
   "extends": "eslint:recommended"
 }
